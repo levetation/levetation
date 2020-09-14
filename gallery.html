@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Device View -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="master.css">
+    <link rel="stylesheet" href="gallery_style.css">
+
+    <!-- Title -->
+    <title>Gallery</title>
+</head>
+<body>
+    
+    <!-- Nav Bar  -->
+    <div class="nav_bar">
+        <a href="index.html" class="navbtn">Home</a>
+        <a href="gallery.html" class="navbtn">Gallery</a>
+        <a href="directions.html" class="navbtn">Directions</a>
+        <a href="services.html" classs="navbtn">Services</a>
+        <a href="about.html" class="navbtn">About</a>
+    </div>
+
+    <!-- Phone number banner -->
+    <div class="mobile_banner">
+        <h1><a href="tel:07811465391">07811 465 391</a></h1>
+    </div>
+
+    <div class="info">
+        <h2>Tap / Click on the photos to expand!</h2>
+    </div>
+
+    <div class="photo_grid">
+
+        <div class="photo"><img class="myImg" src="images/lubo-minar-9QI8-MiD8Wg-unsplash.jpg" alt="Snow"></div>
+        <div class="photo"><img class="myImg" src="images/lubo-minar-9QI8-MiD8Wg-unsplash.jpg" alt="Snow"></div>
+        <div class="photo"><img class="myImg" src="images/lubo-minar-9QI8-MiD8Wg-unsplash.jpg" alt="Snow"></div>
+        <div class="photo"><img class="myImg" src="images/lubo-minar-9QI8-MiD8Wg-unsplash.jpg" alt="Snow"></div>
+        <div class="photo"><img class="myImg" src="images/lubo-minar-9QI8-MiD8Wg-unsplash.jpg" alt="Snow"></div>
+        <div class="photo"><img class="myImg" src="images/lubo-minar-9QI8-MiD8Wg-unsplash.jpg" alt="Snow"></div>
+        <div class="photo"><img class="myImg" src="images/lubo-minar-9QI8-MiD8Wg-unsplash.jpg" alt="Snow"></div>
+        <div class="photo"><img class="myImg" src="images/lubo-minar-9QI8-MiD8Wg-unsplash.jpg" alt="Snow"></div>
+        <div class="photo"><img class="myImg" src="images/lubo-minar-9QI8-MiD8Wg-unsplash.jpg" alt="Snow"></div>
+        <div class="photo"><img class="myImg" src="images/lubo-minar-9QI8-MiD8Wg-unsplash.jpg" alt="Snow"></div>
+        <div class="photo"><img class="myImg" src="images/lubo-minar-9QI8-MiD8Wg-unsplash.jpg" alt="Snow"></div>
+        <div class="photo"><img class="myImg" src="images/lubo-minar-9QI8-MiD8Wg-unsplash.jpg" alt="Snow"></div>
+        <div class="photo"><img class="myImg" src="images/lubo-minar-9QI8-MiD8Wg-unsplash.jpg" alt="Snow"></div>
+        <div class="photo"><img class="myImg" src="images/lubo-minar-9QI8-MiD8Wg-unsplash.jpg" alt="Snow"></div>
+        <div class="photo"><img class="myImg" src="images/lubo-minar-9QI8-MiD8Wg-unsplash.jpg" alt="Snow"></div>
+        <div class="photo"><img class="myImg" src="images/lubo-minar-9QI8-MiD8Wg-unsplash.jpg" alt="Snow"></div>
+        <div class="photo"><img class="myImg" src="images/lubo-minar-9QI8-MiD8Wg-unsplash.jpg" alt="Snow"></div>
+        <div class="photo"><img class="myImg" src="images/lubo-minar-9QI8-MiD8Wg-unsplash.jpg" alt="Snow"></div>
+        <div class="photo"><img class="myImg" src="images/lubo-minar-9QI8-MiD8Wg-unsplash.jpg" alt="Snow"></div>
+        <div class="photo"><img class="myImg" src="images/lubo-minar-9QI8-MiD8Wg-unsplash.jpg" alt="Snow"></div>
+        <div class="photo"><img class="myImg" src="images/lubo-minar-9QI8-MiD8Wg-unsplash.jpg" alt="Snow"></div>
+        <div class="photo"><img class="myImg" src="images/lubo-minar-9QI8-MiD8Wg-unsplash.jpg" alt="Snow"></div>
+        <div class="photo"><img class="myImg" src="images/lubo-minar-9QI8-MiD8Wg-unsplash.jpg" alt="Snow"></div>
+        <div class="photo"><img class="myImg" src="images/lubo-minar-9QI8-MiD8Wg-unsplash.jpg" alt="Snow"></div>    
+    </div>
+
+<!------------------------------- modal ------------------------------------>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+    <div id="caption"></div>
+</div>
+
+<!-- JAVASCRIPT (modal) -->
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementsByClassName('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+
+var showModal = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+for (var i = 0; i < img.length; i++) {
+    img[i].addEventListener('click', showModal);
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+
+</body>
+</html>
